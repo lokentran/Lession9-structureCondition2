@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh BMI</title>
+</head>
+<body>
+    
+<script>
+
+let weight = +prompt("Nhap vao can nang cua ban:");
+let height = +prompt("Nhap vao chieu cao cua ban");
+
+let resultBmi = weight/(height**2);
+
+if(resultBmi >= 30) {
+    alert(`Your BMI is ${resultBmi}. Obese! `);
+} else if (resultBmi >=25) {
+    alert(`Your BMI is ${resultBmi}. Overweight! `);
+} else if (resultBmi >= 18.5) {
+    alert(`Your BMI is ${resultBmi}. Normal! `);
+} else {
+    alert(`Your BMI is ${resultBmi}. Underweight! `);
+}
+
+</script>
+
+</body>
+</html>
