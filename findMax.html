@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find max in 3 numbers</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhap vao so a:');
+    let b = +prompt('Nhap vao so b:');
+    let c = +prompt('Nhap vao so c:');
+
+    let max = a;
+
+    if(max > b) {
+        if (max > c) {
+            alert(max);
+        } else {
+            max = c;
+            alert(max);
+        }
+    } else {
+        max = b;
+        if(max > c) {
+            alert(max);
+        } else {
+            max = c;
+            alert(max);
+        }
+    }
+
+</script>
+</body>
+</html>
