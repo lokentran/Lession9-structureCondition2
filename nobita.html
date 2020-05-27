@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobita</title>
+    <style>
+        .box {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+            justify-content: center;
+        }
+        .box-img {
+            position: relative;
+            display: inline-flex;
+            height: 200px;
+            width: 200px;
+        }
+        div {
+            text-align: center;
+        }
+        img {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-img">
+            <img id="nobita" src="nobita.png" alt="">
+        </div>
+       
+    </div>
+
+    <div>
+        <p>Use key:up down left right to move Nobita</p>
+       
+        <button id="top"    onclick="moveImg(this.innerHTML)">Top</button>
+        <button id="right"  onclick="moveImg(this.innerHTML)">Right</button>
+        <button id="down"   onclick="moveImg(this.innerHTML)">Down</button>
+        <button id="left"   onclick="moveImg(this.innerHTML)">Left</button>
+    </div>
+
+<script>
+    let move = document.getElementById('nobita');
+
+    function init() {
+        move.style.position = 'a';
+        move.style.left = '0px';
+        move.style.top = '0px';
+    }    
+    window.onload = init;
+
+    function moveImg(direction) {
+        switch(direction) {
+            case 'Top':
+                move.style.top = parseInt(move.style.top) - 5 + "px";
+            break;
+            case 'Right':
+                move.style.left = parseInt(move.style.left) - 5 + "px";
+            break;
+            case 'Down':
+                move.style.top = parseInt(move.style.top) + 5 + "px";
+            break;
+            case 'Left':
+                move.style.left = parseInt(move.style.left) + 5 + "px";
+            break;
+        }
+    }
+    
+</script>
+</body>
+</html>
